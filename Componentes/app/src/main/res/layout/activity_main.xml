@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toast Me"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/button_snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Snack Me"
+        android:layout_gravity="center"/>
+
+    <Spinner
+        android:id="@+id/spinner_static"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/spinner_values"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_dinamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_spinnerestatico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spinner obter"
+            android:gravity="left"/>
+
+        <Button
+            android:id="@+id/button_spinnerdinamico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spinner Atribuir"
+            android:gravity="right"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+            android:id="@+id/text_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_obterseek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seek obter"
+            android:gravity="left"/>
+
+        <Button
+            android:id="@+id/button_atribuirseek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seek Atribuir"
+            android:gravity="right"/>
+    </LinearLayout>
+
+    <Switch
+        android:layout_marginTop="16dp"
+        android:id="@+id/switch_on_off"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <CheckBox
+        android:id="@+id/check_on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="On / Off"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group_on_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radio_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio on"
+            />
+
+        <RadioButton
+            android:id="@+id/radio_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio off"
+            />
+
+    </RadioGroup>
+
+
+
+</LinearLayout>

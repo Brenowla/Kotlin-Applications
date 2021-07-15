@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PagamentoActivity">
+
+    <TextView
+        android:id="@+id/pagamento_textview_descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/digite_as_informacoes"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pagamento_textview_valordacompra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Valor da compra:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/pagamento_textview_descricao"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_textview_descricao"
+
+        />
+
+    <TextView
+        android:id="@+id/pagamento_textview_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/pagamento_textview_valordacompra"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_textview_valordacompra"
+        tools:text="R$ 421,50" />
+
+    <EditText
+        android:id="@+id/pagamento_edittext_numero_cartao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Número do Cartão"
+        android:inputType="number"
+        android:maxLength="12"
+        app:layout_constraintEnd_toEndOf="@+id/pagamento_textview_descricao"
+        app:layout_constraintStart_toStartOf="@id/pagamento_textview_preco"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_textview_preco" />
+
+    <EditText
+        android:id="@+id/pagamento_edittext_mes"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="MM"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintBottom_toBottomOf="@id/pagamento_edittext_cvc"
+        app:layout_constraintStart_toStartOf="@id/pagamento_edittext_numero_cartao" />
+
+    <EditText
+        android:id="@+id/pagamento_edittext_ano"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:hint="AA"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintStart_toEndOf="@id/pagamento_edittext_mes"
+        app:layout_constraintTop_toTopOf="@id/pagamento_edittext_mes" />
+
+    <EditText
+        android:id="@+id/pagamento_edittext_cvc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/ic_cvc_cartao_de_credito"
+        android:hint="CVC"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintEnd_toEndOf="@id/pagamento_edittext_numero_cartao"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/pagamento_edittext_ano"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_edittext_numero_cartao" />
+
+    <EditText
+        android:id="@+id/pagamento_edittext_nome_cartao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZÇ "
+        android:hint="Nome no cartão"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/pagamento_edittext_cvc"
+        app:layout_constraintStart_toStartOf="@id/pagamento_edittext_mes"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_edittext_cvc" />
+
+    <Button
+        android:id="@+id/pagamento_button_finalizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/botao_redondo"
+        android:maxLength="256"
+        android:text="Finalizar Compra"
+        app:layout_constraintEnd_toEndOf="@id/pagamento_edittext_numero_cartao"
+        app:layout_constraintStart_toStartOf="@id/pagamento_edittext_numero_cartao"
+        app:layout_constraintTop_toBottomOf="@id/pagamento_edittext_nome_cartao" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
